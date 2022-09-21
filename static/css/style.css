@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap');
+
+:root {
+    --card-box: #537FA4;
+    --bg-color: #B1D5DE;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.7;
+    background-color: var(--bg-color);
+}
+
+img {
+    width: 100%;
+}
+
+.btn-view {
+    background-color: var(--card-box);
+    color: #FFFF;
+}
+
+/* Intro Section */
+
+.intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    height: 90vh;
+}
+
+.intro-heading {
+    font-size: 3.4rem;
+    font-weight: 700;
+}
+
+.intro-desc {
+    font-size: 1.3rem;
+    color: gray;
+    margin-top: 2rem;
+
+}
+
+.intro-img {
+    width: 30rem;
+    position: relative;
+    animation: galawgalaw 3s linear infinite;
+}
+
+@keyframes galawgalaw {
+
+    0%,
+    100% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 10px;
+    }
+
+}
+
+/* Card Section */
+
+.view .card {
+    transition: all .4s ease;
+    box-shadow: 0px 0px 5px 1px black;
+}
+
+.view .card:hover {
+    transform: scale(1.05);
+    border: solid 1px black;
+}
+
+.card-footer {
+    background-color: rgb(231, 231, 231);
+}
+
+.student-link {
+    text-decoration: none;
+}
+
+/* About Us  */
+
+
+.about-us__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.about-us__container .card {
+    place-content: center;
+    align-items: center;
+    padding: 1rem;
+    width: 15rem;
+    margin-top: 5rem;
+    transition: all .7s ease;
+    background-color: var(--card-box);
+    color: #FFFF;
+}
+
+.about-us__container .card:hover {
+    scale: 1.1;
+}
+
+.about-us__img {
+    width: 10rem;
+    border: 1px solid rgb(179, 179, 179);
+    border-radius: 50%;
+}

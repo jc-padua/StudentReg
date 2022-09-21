@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% block content%}
+<h2 class="text-center">{%block title%} Edit Student Information {%endblock%}</h2>
+<section class="d-flex flex-column justify-content-center align-items-center">
+    <form method="post" class=" d-flex flex-column gap-3">
+        <div class="form-group d-flex  gap-4">
+            <div class="name">
+                <label for="first-name">First Name</label>
+                <input type="text" name="first-name" placeholder="Enter your first name" class="form-control"
+                    value="{{ request.form['stud_fname'] or student['stud_fname'] }}" required>
+            </div>
+            <div class="name">
+                <label for="middle-name">Middle Name</label>
+                <input type="text" name="middle-name" placeholder="Enter your middle name" class="form-control"
+                    value="{{ request.form['stud_mname']  or student['stud_mname'] }}">
+            </div>
+            <div class="name">
+                <label for="last-name">Last Name</label>
+                <input type="text" name="last-name" placeholder="Enter your last name" class="form-control"
+                    value="{{ request.form['stud_lname']  or student['stud_lname'] }}" required>
+            </div>
+        </div>
+        <div class="form-group d-flex flex-column">
+            <label for="">Date of Birth</label>
+            <input type="date" name="dob" value="{{ request.form['stud_dob']  or student['stud_dob'] }}" required>
+        </div>
+        <div class="form-group d-flex flex-column gap-4">
+            <div class="col">
+                <label for="course">Course <span style="color: gray;">(e.g BSIT)</span></label>
+                <input type="text" name="course" placeholder="Enter your course" class="form-control"
+                    value="{{ request.form['stud_course']  or student['stud_course'] }}" required>
+            </div>
+            <div class="col">
+                <label for="year">Year <span style="color: gray;">(e.g 1st year)</span></label>
+                <input type="text" name="year" placeholder="Enter your year level" class="form-control"
+                    value="{{ request.form['stud_year']  or student['stud_year'] }}" required>
+            </div>
+        </div>
+
+        <div class="form-group d-flex gap-4">
+            <div class="col">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email" class="form-control"
+                    value="{{ request.form['stud_email']  or student['stud_email']}}" required>
+            </div>
+            <div class="col">
+                <label for="contact">Contact No.</label>
+                <input type="tel" name="contact" id="contact" placeholder="Enter your Contact No." class="form-control"
+                    value="{{ request.form['stud_contact']  or student['stud_contact'] }}">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="address">Address</label>
+            <input type="tel" name="address" id="address" placeholder="Enter your address" class="form-control"
+                value="{{ request.form['stud_address']  or student['stud_address']}}">
+        </div>
+
+        <div class="form-group mt-3">
+            <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+
+    </form>
+</section>
+{% endblock %}

@@ -1,0 +1,55 @@
+{%extends 'base.html' %}
+{% block content%}
+<div class="container d-flex flex-column align-items-center justify-content-center">
+    <h2 class="mt-5">{% block title %} Student Information {%endblock%}</h2>
+    <div class="card text-bg-light mt-3" style="width: 30rem; padding: 1rem;">
+        <div class="card-body">
+            <h2 class="card-title">{{ student['stud_fname']}} {{student['stud_mname']}}. {{student['stud_lname']}} </h2>
+            <hr>
+            <div class="text m-4">
+                <table>
+                    <tr>
+                        <td>Date of Birth:</td>
+                        <td>
+                            <p class="card-subtitle ms-3">{{ student['stud_dob']}}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Course:</td>
+                        <td>
+                            <p class="card-subtitle ms-3">{{ student['stud_course']}}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Year:</td>
+                        <td>
+                            <p class="card-subtitle ms-3">{{ student['stud_year']}}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Email:</td>
+                        <td>
+                            <p class="card-subtitle ms-3">{{ student['stud_email']}}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Contact:</td>
+                        <td>
+                            <p class="card-subtitle ms-3">{{ student['stud_contact']}}</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Address:</td>
+                        <td>
+                            <p class="card-subtitle ms-3">{{ student['stud_address']}}</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="card-footer text-muted text-center">
+                <a href="{{ url_for('edit', ID=student['stud_ID'])}}" class="student-link">Edit</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock%}
