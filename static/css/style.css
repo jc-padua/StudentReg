@@ -110,3 +110,24 @@ img {
     border: 1px solid rgb(179, 179, 179);
     border-radius: 50%;
 }
+
+@media (max-width:768px) {
+    .intro {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .intro-heading {
+        font-size: 3rem;
+    }
+
+    .intro-img {
+        width: 100%;
+    }
+
+    .about-us__container {
+        flex-direction: column;
+    }
+}
