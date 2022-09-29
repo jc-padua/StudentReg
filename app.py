@@ -74,7 +74,6 @@ def add():
 @app.route('/<int:ID>/edit', methods=('GET','POST'))
 def edit(ID):
     student = get_student(ID)
-    
     if request.method == 'POST':
         firstName = request.form['first-name']
         middleName = request.form['middle-name']
