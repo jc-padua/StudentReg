@@ -119,4 +119,5 @@ def delete(ID):
 def about():
     return render_template('about.html')
     
-app.run(host='localhost', debug=True)
+if __name__ == '__main__':
+    app.run(host='localhost', debug=True)
